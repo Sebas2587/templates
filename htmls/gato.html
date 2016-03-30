@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+
+{% block page_title %}
+	
+	{{ title }}
+
+{% endblock %}
+
+{% block content %}
+
+	{% if gato %}
+	<h1> si hay gatos </h1>
+	<ul>
+		{% for g in gato %}
+
+	<li>
+		{{ g.name }}
+	</li>
+
+		{% endfor %}
+	</ul>
+	{% else %}
+	<h1>no hay gatos</h1>
+	{%endif%}
+</body>
+</html>
+
+
+{% endblock %}
